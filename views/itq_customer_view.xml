@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="itq_customer_tree_view" model="ir.ui.view">
+        <field name="name">itq customer tree</field>
+        <field name="model">itq.customer</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="customer"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="price"/>
+                <field name="status"/>
+<!--                <field name="number_of_days"/>-->
+                <field name="average_day_price"/>
+                <field name="last_user_change_status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="itq_customer_form_view" model="ir.ui.view">
+        <field name="name">itq customer form</field>
+        <field name="model">itq.customer</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <header>
+                          <field name="status" widget="statusbar" statusbar_visible="" options="{'clickable': '1'}"/>
+                    </header>
+                        <group>
+                            <h1>
+                                <label for = "customer" />
+                                <field name="customer"/>
+                            </h1>
+                        </group>
+                        <group>
+                             <group>
+                              <field name="start_date"/>
+                              <field name="end_date"/>
+                             </group>
+                         <group>
+                              <field name="price"/>
+<!--                              <field name="number_of_days"/>-->
+                              <field name="average_day_price"/>
+                               <field name="last_user_change_status"/>
+                         </group>
+                        </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="itq_customer_window_action" model="ir.actions.act_window">
+        <field name="name">itq customer action</field>
+        <field name="res_model">itq.customer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="customer_main_menu" name="Customer Main Menu"/>
+    <menuitem id="itq_customer_menu"
+              name="itq.customer"
+              action="itq_customer_window_action"
+              parent="customer_main_menu"
+    />
+</odoo>

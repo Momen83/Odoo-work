@@ -1,0 +1,1 @@
+from . import itq_customer ,itq_res_partner
