@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_itq_customer,access_itq_customer,model_itq_customer,,1,1,1,1
+access_itq_customer_user,access_itq_customer_user,model_itq_customer,itq_customer.contract_user,1,0,0,0
+access_itq_customer_manger,access_itq_customer_manger,model_itq_customer,itq_customer.contract_manger,1,1,1,1

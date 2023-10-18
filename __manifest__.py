@@ -12,6 +12,7 @@
     'depends': ['base'],
     'demo': [],
     'data':[
+        'security/res_groups.xml',
         'security/ir.model.access.csv',
         'views/itq_customer_view.xml',
         'views/res_partner_views.xml'

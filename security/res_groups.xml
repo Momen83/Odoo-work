@@ -1,0 +1,9 @@
+<odoo>
+    <record model = "res.groups" id = "contract_user">
+    <field name = "name">Contract User</field>
+    </record>
+
+    <record model = "res.groups" id = "contract_manger">
+    <field name = "name">Contract Manger</field>
+    </record>
+</odoo>
