@@ -14,6 +14,7 @@
     'data':[
         'security/res_groups.xml',
         'security/ir.model.access.csv',
+        'security/ir_rule.xml',
         'views/itq_customer_view.xml',
         'views/res_partner_views.xml'
     ],

@@ -1,9 +1,16 @@
-<odoo>
-    <record model = "res.groups" id = "contract_user">
-    <field name = "name">Contract User</field>
-    </record>
+    <odoo>
 
-    <record model = "res.groups" id = "contract_manger">
-    <field name = "name">Contract Manger</field>
-    </record>
-</odoo>
+         <record model = "ir.module.category" id = "contract_type_category">
+        <field name = "name">Contract Type</field>
+        </record>
+        <record model = "res.groups" id = "contract_user">
+            <field name = "name">Contract User</field>
+            <field name="category_id" ref = "itq_customer.contract_type_category"/>
+        </record>
+
+        <record model = "res.groups" id = "contract_manger">
+            <field name = "name">Contract Manger</field>
+            <field name="category_id" ref = "itq_customer.contract_type_category"/>
+            <field name="implied_ids" eval="[(4, ref('itq_customer.contract_user'))]"/>
+        </record>
+    </odoo>
